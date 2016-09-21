@@ -18,6 +18,7 @@ class AuthMemberController extends Controller {
         
     }
 
+    //Login page
     public function getLogin() {
         $title = 'Login Page';
         return view('pages/AuthPages/loginPage', array(
@@ -25,11 +26,37 @@ class AuthMemberController extends Controller {
         ));
     }
 
+    // Login logic
+    public function postLogin() {
+
+        //Get parameter from login page
+        $userdata = array(
+            'username' => Input::get('username'),
+            'password' => Input::get('password')
+        );
+
+        //If success
+        if (auth('member')->attempt($userdata)) {
+            return redirect('profile' . auth('member')->user()->username);
+        }
+        //If failed
+        else {
+            $request->session()->flash('status', "username and password didn't match");
+            return redirect('/login');
+        }
+    }
+
+    //Registration page
     public function getRegister() {
         $title = 'Registration Page';
         return view('pages/AuthPages/registrationPage', array(
             'title' => $title
         ));
+    }
+
+    // Registration Logic
+    public function postRegister(Request $request) {
+        
     }
 
 }
