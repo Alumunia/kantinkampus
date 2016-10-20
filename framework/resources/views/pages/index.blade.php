@@ -1,4 +1,4 @@
-@extends('layouts.layout')
+@extends('layouts.homeLayouts.layout')
 
 @section('content')
 <!-- Page container -->

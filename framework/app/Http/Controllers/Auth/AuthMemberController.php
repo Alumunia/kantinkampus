@@ -21,7 +21,7 @@ class AuthMemberController extends Controller {
     //Login page
     public function getLogin() {
         $title = 'Login Page';
-        return view('pages/AuthPages/loginPage', array(
+        return view('pages/memberPages/loginPage', array(
             'title' => $title
         ));
     }
@@ -49,7 +49,7 @@ class AuthMemberController extends Controller {
     //Registration page
     public function getRegister() {
         $title = 'Registration Page';
-        return view('pages/AuthPages/registrationPage', array(
+        return view('pages/memberPages/registrationPage', array(
             'title' => $title
         ));
     }

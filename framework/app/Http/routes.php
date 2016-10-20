@@ -26,4 +26,4 @@ Route::get('/registration', 'Auth\AuthMemberController@getRegister');
 Route::post('/registration', 'Auth\AuthMemberController@postRegister');
 
 //About Me
-Route::get('/aboutMe', 'About\AboutController@index');
+Route::get('/aboutMe', 'Freelancer\FreelancerController@index');
