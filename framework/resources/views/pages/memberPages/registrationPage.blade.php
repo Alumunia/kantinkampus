@@ -116,7 +116,7 @@
 
                                     <div class="text-right">
                                         <button type="submit" class="btn btn-link"><i class="icon-arrow-left13 position-left"></i> Back to login form</button>
-                                        <button type="submit" class="btn bg-teal-400 btn-labeled btn-labeled-right ml-10"><b><i class="icon-plus3"></i></b> Create account</button>
+                                        <button type="submit" class="btn btn-labeled-right btn-primary ml-10">Submit</button>
                                     </div>
                                 </div>
                             </div>
